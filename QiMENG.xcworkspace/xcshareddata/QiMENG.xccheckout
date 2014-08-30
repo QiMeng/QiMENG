@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>611C887C-2B8C-4D2B-B4E0-8AA202D2A76E</string>
+	<key>IDESourceControlProjectName</key>
+	<string>QiMENG</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>CB839330D54BE4C1F87CC1D3C037CD791F859528</key>
+		<string>https://github.com/QiMeng/QiMENG.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>QiMENG.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>CB839330D54BE4C1F87CC1D3C037CD791F859528</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/QiMeng/QiMENG.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>CB839330D54BE4C1F87CC1D3C037CD791F859528</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>CB839330D54BE4C1F87CC1D3C037CD791F859528</string>
+			<key>IDESourceControlWCCName</key>
+			<string>QiMENG</string>
+		</dict>
+	</array>
+</dict>
+</plist>
