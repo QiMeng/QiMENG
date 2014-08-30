@@ -1,0 +1,427 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7CA18F2719B1EEDF007D8829 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA18F2619B1EEDF007D8829 /* AppDelegate.swift */; };
+		7CA18F2A19B1EEDF007D8829 /* QiMENG.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7CA18F2819B1EEDF007D8829 /* QiMENG.xcdatamodeld */; };
+		7CA18F2C19B1EEDF007D8829 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA18F2B19B1EEDF007D8829 /* ViewController.swift */; };
+		7CA18F2F19B1EEDF007D8829 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CA18F2D19B1EEDF007D8829 /* Main.storyboard */; };
+		7CA18F3119B1EEDF007D8829 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CA18F3019B1EEDF007D8829 /* Images.xcassets */; };
+		7CA18F3D19B1EEDF007D8829 /* QiMENGTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA18F3C19B1EEDF007D8829 /* QiMENGTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7CA18F3719B1EEDF007D8829 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7CA18F1919B1EEDE007D8829 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7CA18F2019B1EEDE007D8829;
+			remoteInfo = QiMENG;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7CA18F2119B1EEDF007D8829 /* QiMENG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QiMENG.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CA18F2519B1EEDF007D8829 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7CA18F2619B1EEDF007D8829 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7CA18F2919B1EEDF007D8829 /* QiMENG.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QiMENG.xcdatamodel; sourceTree = "<group>"; };
+		7CA18F2B19B1EEDF007D8829 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7CA18F2E19B1EEDF007D8829 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7CA18F3019B1EEDF007D8829 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		7CA18F3619B1EEDF007D8829 /* QiMENGTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QiMENGTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CA18F3B19B1EEDF007D8829 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7CA18F3C19B1EEDF007D8829 /* QiMENGTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiMENGTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7CA18F1E19B1EEDE007D8829 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7CA18F3319B1EEDF007D8829 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7CA18F1819B1EEDE007D8829 = {
+			isa = PBXGroup;
+			children = (
+				7CA18F2319B1EEDF007D8829 /* QiMENG */,
+				7CA18F3919B1EEDF007D8829 /* QiMENGTests */,
+				7CA18F2219B1EEDF007D8829 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7CA18F2219B1EEDF007D8829 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7CA18F2119B1EEDF007D8829 /* QiMENG.app */,
+				7CA18F3619B1EEDF007D8829 /* QiMENGTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7CA18F2319B1EEDF007D8829 /* QiMENG */ = {
+			isa = PBXGroup;
+			children = (
+				7CA18F2619B1EEDF007D8829 /* AppDelegate.swift */,
+				7CA18F2B19B1EEDF007D8829 /* ViewController.swift */,
+				7CA18F2D19B1EEDF007D8829 /* Main.storyboard */,
+				7CA18F3019B1EEDF007D8829 /* Images.xcassets */,
+				7CA18F2819B1EEDF007D8829 /* QiMENG.xcdatamodeld */,
+				7CA18F2419B1EEDF007D8829 /* Supporting Files */,
+			);
+			path = QiMENG;
+			sourceTree = "<group>";
+		};
+		7CA18F2419B1EEDF007D8829 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7CA18F2519B1EEDF007D8829 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7CA18F3919B1EEDF007D8829 /* QiMENGTests */ = {
+			isa = PBXGroup;
+			children = (
+				7CA18F3C19B1EEDF007D8829 /* QiMENGTests.swift */,
+				7CA18F3A19B1EEDF007D8829 /* Supporting Files */,
+			);
+			path = QiMENGTests;
+			sourceTree = "<group>";
+		};
+		7CA18F3A19B1EEDF007D8829 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7CA18F3B19B1EEDF007D8829 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7CA18F2019B1EEDE007D8829 /* QiMENG */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7CA18F4019B1EEDF007D8829 /* Build configuration list for PBXNativeTarget "QiMENG" */;
+			buildPhases = (
+				7CA18F1D19B1EEDE007D8829 /* Sources */,
+				7CA18F1E19B1EEDE007D8829 /* Frameworks */,
+				7CA18F1F19B1EEDE007D8829 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QiMENG;
+			productName = QiMENG;
+			productReference = 7CA18F2119B1EEDF007D8829 /* QiMENG.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7CA18F3519B1EEDF007D8829 /* QiMENGTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7CA18F4319B1EEDF007D8829 /* Build configuration list for PBXNativeTarget "QiMENGTests" */;
+			buildPhases = (
+				7CA18F3219B1EEDF007D8829 /* Sources */,
+				7CA18F3319B1EEDF007D8829 /* Frameworks */,
+				7CA18F3419B1EEDF007D8829 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7CA18F3819B1EEDF007D8829 /* PBXTargetDependency */,
+			);
+			name = QiMENGTests;
+			productName = QiMENGTests;
+			productReference = 7CA18F3619B1EEDF007D8829 /* QiMENGTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7CA18F1919B1EEDE007D8829 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = QiMeng_LYS;
+				TargetAttributes = {
+					7CA18F2019B1EEDE007D8829 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					7CA18F3519B1EEDF007D8829 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = 7CA18F2019B1EEDE007D8829;
+					};
+				};
+			};
+			buildConfigurationList = 7CA18F1C19B1EEDE007D8829 /* Build configuration list for PBXProject "QiMENG" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7CA18F1819B1EEDE007D8829;
+			productRefGroup = 7CA18F2219B1EEDF007D8829 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7CA18F2019B1EEDE007D8829 /* QiMENG */,
+				7CA18F3519B1EEDF007D8829 /* QiMENGTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7CA18F1F19B1EEDE007D8829 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7CA18F2F19B1EEDF007D8829 /* Main.storyboard in Resources */,
+				7CA18F3119B1EEDF007D8829 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7CA18F3419B1EEDF007D8829 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7CA18F1D19B1EEDE007D8829 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7CA18F2C19B1EEDF007D8829 /* ViewController.swift in Sources */,
+				7CA18F2A19B1EEDF007D8829 /* QiMENG.xcdatamodeld in Sources */,
+				7CA18F2719B1EEDF007D8829 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7CA18F3219B1EEDF007D8829 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7CA18F3D19B1EEDF007D8829 /* QiMENGTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7CA18F3819B1EEDF007D8829 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7CA18F2019B1EEDE007D8829 /* QiMENG */;
+			targetProxy = 7CA18F3719B1EEDF007D8829 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7CA18F2D19B1EEDF007D8829 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7CA18F2E19B1EEDF007D8829 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7CA18F3E19B1EEDF007D8829 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7CA18F3F19B1EEDF007D8829 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7CA18F4119B1EEDF007D8829 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = QiMENG/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7CA18F4219B1EEDF007D8829 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = QiMENG/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		7CA18F4419B1EEDF007D8829 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = QiMENGTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QiMENG.app/QiMENG";
+			};
+			name = Debug;
+		};
+		7CA18F4519B1EEDF007D8829 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = QiMENGTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QiMENG.app/QiMENG";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7CA18F1C19B1EEDE007D8829 /* Build configuration list for PBXProject "QiMENG" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7CA18F3E19B1EEDF007D8829 /* Debug */,
+				7CA18F3F19B1EEDF007D8829 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7CA18F4019B1EEDF007D8829 /* Build configuration list for PBXNativeTarget "QiMENG" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7CA18F4119B1EEDF007D8829 /* Debug */,
+				7CA18F4219B1EEDF007D8829 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		7CA18F4319B1EEDF007D8829 /* Build configuration list for PBXNativeTarget "QiMENGTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7CA18F4419B1EEDF007D8829 /* Debug */,
+				7CA18F4519B1EEDF007D8829 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7CA18F2819B1EEDF007D8829 /* QiMENG.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7CA18F2919B1EEDF007D8829 /* QiMENG.xcdatamodel */,
+			);
+			currentVersion = 7CA18F2919B1EEDF007D8829 /* QiMENG.xcdatamodel */;
+			path = QiMENG.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 7CA18F1919B1EEDE007D8829 /* Project object */;
+}
