@@ -11,6 +11,8 @@ import UIKit
 
 class BaseViewController : UIViewController {
     
+    var titleLabel : UILabel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -18,9 +20,24 @@ class BaseViewController : UIViewController {
         
         self.view.backgroundColor = UIColor.whiteColor()
         
+    }
+    
+    func navTitle(title:String?) {
         
+        if titleLabel == nil {
+            
+            titleLabel = UILabel(frame: CGRectMake(0, 0, 200, 44))
+            self.navigationItem.titleView = titleLabel
+            
+            titleLabel?.textColor = UIColor.whiteColor()
+            titleLabel?.backgroundColor = UIColor.clearColor()
+            titleLabel?.textAlignment = NSTextAlignment.Center
+            titleLabel?.font = UIFont(name: kBaseFont, size: 17)
+        }
         
+        titleLabel?.text = title
         
     }
+    
 
 }

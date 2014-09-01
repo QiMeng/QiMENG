@@ -16,7 +16,7 @@ class HonoursViewController: BaseViewController {
         // Do any additional setup after loading the view.
         
         let leftBtn = UIButton(frame: CGRectMake(0, 0, 44, 44))
-//        leftBtn.setTitle("", forState: <#UIControlState#>)
+        
         leftBtn.setImage(UIImage(named: "arrow-left"), forState: UIControlState.Normal)
         leftBtn.addTarget(self, action: "leftBtnCall:", forControlEvents: UIControlEvents.TouchUpInside)
         
@@ -28,6 +28,11 @@ class HonoursViewController: BaseViewController {
     func leftBtnCall(sender:AnyObject?){
         self.navigationController.popViewControllerAnimated(true)
     }
+    
+    
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

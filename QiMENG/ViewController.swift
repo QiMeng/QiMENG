@@ -147,8 +147,11 @@ class ViewController: BaseViewController , UITableViewDataSource,UITableViewDele
         
         var classid = item.objectForKey("classid") as String?
         
+        var label = item.objectForKey("label") as String?
+        
         if classid == "Honours" {
             var ctrl = HonoursViewController()
+            ctrl.navTitle(label?)
             self.navigationController.pushViewController(ctrl, animated: true)
         }
         
