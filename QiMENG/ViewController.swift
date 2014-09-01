@@ -68,7 +68,7 @@ class ViewController: BaseViewController , UITableViewDataSource,UITableViewDele
         if headerView == nil{
         
             
-            headerView = UIImageView(frame: CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 5 * 44))
+            headerView = UIImageView(frame: CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 44 - 44 * CGFloat(Personal.shareInstance().tables.count) ))
 //            self.view.addSubview(headerView!)
             
             headerView?.backgroundColor = UIColor(red: 0/255.0, green: 128/255.0, blue: 255/255.0, alpha: 1)
