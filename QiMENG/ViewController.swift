@@ -118,6 +118,7 @@ class ViewController: BaseViewController , UITableViewDataSource,UITableViewDele
         if cell == nil { // no value
             cell = UITableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: cellIdentifier)
             cell?.textLabel.font = UIFont(name: kBaseFont, size: 17)
+            cell?.detailTextLabel.font = UIFont(name: kBaseFont, size: 17)
             cell?.selectionStyle = UITableViewCellSelectionStyle.None
             
             cell?.accessoryView = UIImageView(image: UIImage(named: "arrow-right"))
