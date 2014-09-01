@@ -16,7 +16,7 @@ class BaseViewController : UIViewController {
         
         self.navigationController.navigationBar.translucent = false;
         
-        
+        self.view.backgroundColor = UIColor.whiteColor()
         
         
         

@@ -31,7 +31,7 @@ class ViewController: BaseViewController , UITableViewDataSource,UITableViewDele
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.view.backgroundColor = UIColor(red: 0/255.0, green: 128/255.0, blue: 255/255.0, alpha: 1)
-        self.navigationController.navigationBar.barTintColor = self.view.backgroundColor        
+        self.navigationController.navigationBar.barTintColor = self.view.backgroundColor
         
         let mySegment = UISegmentedControl(items: ["Personal","Project"] )
         mySegment.tintColor = UIColor.whiteColor()
@@ -141,6 +141,17 @@ class ViewController: BaseViewController , UITableViewDataSource,UITableViewDele
         UIView.animateWithDuration(0.3, animations: { () -> Void in
             cell.accessoryView.transform = CGAffineTransformMakeRotation(CGFloat(M_PI/2.0))
         })
+        
+        
+        let item = Personal.shareInstance().tables.objectAtIndex(indexPath.row) as NSDictionary
+        
+        var classid = item.objectForKey("classid") as String?
+        
+        if classid == "Honours" {
+            var ctrl = HonoursViewController()
+            self.navigationController.pushViewController(ctrl, animated: true)
+        }
+        
         
     }
     

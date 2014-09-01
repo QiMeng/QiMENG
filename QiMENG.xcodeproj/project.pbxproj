@@ -17,6 +17,7 @@
 		7CA18F4C19B23185007D8829 /* Personal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA18F4B19B23185007D8829 /* Personal.swift */; };
 		7CA18F5419B2FFF0007D8829 /* PersonalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA18F5319B2FFF0007D8829 /* PersonalView.swift */; };
 		D933174F20C244CD8CC0802B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E748E3624BB04E038DC52C18 /* libPods.a */; };
+		F03F8C5719B47843006E380B /* HonoursViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03F8C5619B47843006E380B /* HonoursViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		7CA18F4B19B23185007D8829 /* Personal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Personal.swift; sourceTree = "<group>"; };
 		7CA18F5319B2FFF0007D8829 /* PersonalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalView.swift; sourceTree = "<group>"; };
 		E748E3624BB04E038DC52C18 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F03F8C5619B47843006E380B /* HonoursViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HonoursViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				7CA18F2619B1EEDF007D8829 /* AppDelegate.swift */,
 				7CA18F4819B20FCF007D8829 /* BaseViewController.swift */,
 				7CA18F2B19B1EEDF007D8829 /* ViewController.swift */,
+				F03F8C5519B477F9006E380B /* ViewController */,
 				7CA18F4E19B2D9FA007D8829 /* view */,
 				7CA18F4D19B2D9EB007D8829 /* data */,
 				7CA18F2D19B1EEDF007D8829 /* Main.storyboard */,
@@ -143,6 +146,14 @@
 				7CA18F5319B2FFF0007D8829 /* PersonalView.swift */,
 			);
 			name = view;
+			sourceTree = "<group>";
+		};
+		F03F8C5519B477F9006E380B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F03F8C5619B47843006E380B /* HonoursViewController.swift */,
+			);
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 		F874D5EF518146B5909DF5D2 /* Frameworks */ = {
@@ -288,6 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7CA18F5419B2FFF0007D8829 /* PersonalView.swift in Sources */,
+				F03F8C5719B47843006E380B /* HonoursViewController.swift in Sources */,
 				7CA18F2C19B1EEDF007D8829 /* ViewController.swift in Sources */,
 				7CA18F4919B20FCF007D8829 /* BaseViewController.swift in Sources */,
 				7CA18F2A19B1EEDF007D8829 /* QiMENG.xcdatamodeld in Sources */,
