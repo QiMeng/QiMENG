@@ -30,25 +30,36 @@ class ViewController: BaseViewController , UITableViewDataSource,UITableViewDele
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.view.backgroundColor = UIColor(red: 0/255.0, green: 128/255.0, blue: 255/255.0, alpha: 1)
+        self.navigationController.navigationBar.barTintColor = self.view.backgroundColor        
         
-        let mySegment = UISegmentedControl(items: ["Personal","Project"])
+        let mySegment = UISegmentedControl(items: ["Personal","Project"] )
+        mySegment.tintColor = UIColor.whiteColor()
         self.navigationItem.titleView = mySegment
         mySegment.selectedSegmentIndex = 0
         
-        createHeaderView()
+        let rightBtn = UIButton(frame: CGRectMake(0, 0, 44, 44))
+        rightBtn.setImage(UIImage(named: "cw"), forState: UIControlState.Normal)
+        rightBtn.addTarget(self, action: "rigthBtnCall:", forControlEvents: UIControlEvents.TouchUpInside)
+    
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: rightBtn)
         
-        createTableView()
+
         
+        rigthBtnCall(nil)
+    }
+    func rigthBtnCall(sender:AnyObject?){
         didRequest("http://qimeng.github.io/phone/introduction.html", loadString: "加载数据中")
     }
     func createTableView(){
         if myTableView == nil {
-            myTableView = UITableView(frame: self.view.frame)
+            myTableView = UITableView(frame: self.view.bounds)
             myTableView?.tableHeaderView = headerView
             myTableView?.dataSource = self
             myTableView?.delegate = self
-            myTableView?.autoresizingMask = UIViewAutoresizing.FlexibleHeight
+            myTableView?.autoresizingMask = UIViewAutoresizing.FlexibleHeight|UIViewAutoresizing.FlexibleBottomMargin
             myTableView?.alpha = 0
+            myTableView?.backgroundColor = UIColor.clearColor()
             self.view.addSubview(myTableView!)
         }
     }
@@ -56,15 +67,16 @@ class ViewController: BaseViewController , UITableViewDataSource,UITableViewDele
         
         if headerView == nil{
         
-            headerView = UIImageView(frame: CGRectMake(0, 0, self.view.frame.size.width, 170))
+            
+            headerView = UIImageView(frame: CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 5 * 44))
 //            self.view.addSubview(headerView!)
             
-            headerView?.backgroundColor = UIColor(red: 30/255.0, green: 144/255.0, blue: 255/255.0, alpha: 1)
+            headerView?.backgroundColor = UIColor(red: 0/255.0, green: 128/255.0, blue: 255/255.0, alpha: 1)
             
-            headerImageView = UIImageView(frame: CGRectMake(0, 0, 120, 120))
+            headerImageView = UIImageView(frame: CGRectMake(0, 0, headerView!.frame.size.height * 0.8, headerView!.frame.size.height * 0.8))
             headerImageView?.contentMode = UIViewContentMode.ScaleAspectFill
             headerView?.addSubview(headerImageView!)
-            headerImageView?.center = CGPointMake(headerView!.center.x, headerImageView!.center.y+10)
+            headerImageView?.center = CGPointMake(headerView!.center.x, headerImageView!.center.y+5)
             //        headerImageView?.layer.borderWidth = 3
             headerImageView?.layer.borderColor = UIColor(red: 0/255.0, green: 191/255.0, blue: 255/255.0, alpha: 1).CGColor
             headerImageView?.layer.cornerRadius = CGRectGetHeight(headerImageView!.frame)/2.0;
@@ -85,6 +97,8 @@ class ViewController: BaseViewController , UITableViewDataSource,UITableViewDele
         if personalView == nil {
             personalView = PersonalView(frame: CGRectMake(0, CGRectGetMaxY(headerView!.frame), self.view.frame.size.width, 44));
         }
+        personalView?.reloadView()
+
         return personalView
     }
     func tableView(tableView: UITableView!, heightForHeaderInSection section: Int) -> CGFloat {
@@ -102,16 +116,31 @@ class ViewController: BaseViewController , UITableViewDataSource,UITableViewDele
         var cell: UITableViewCell? = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as? UITableViewCell
         
         if cell == nil { // no value
-            cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: cellIdentifier)
+            cell = UITableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: cellIdentifier)
             cell?.textLabel.font = UIFont(name: kBaseFont, size: 17)
-//            cell?.detailTextLabel.font = UIFont(name: kBaseFont, size: 17)
+            cell?.selectionStyle = UITableViewCellSelectionStyle.None
+            
+            cell?.accessoryView = UIImageView(image: UIImage(named: "arrow-right"))
+
         }
         
         let item = Personal.shareInstance().tables.objectAtIndex(indexPath.row) as NSDictionary
 
         cell?.textLabel.text = item.objectForKey("label") as String
+        cell?.detailTextLabel.text = item.objectForKey("title") as String
+//        cell?.imageView.sd_setImageWithURL(NSURL.URLWithString(item.objectForKey("icon") as String))
+        
+        cell?.imageView.sd_setImageWithURL(NSURL.URLWithString(item.objectForKey("icon") as String), placeholderImage: UIImage(named: "warning"))
         
         return cell
+    }
+    func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
+        let cell = tableView.cellForRowAtIndexPath(indexPath)
+        
+        UIView.animateWithDuration(0.3, animations: { () -> Void in
+            cell.accessoryView.transform = CGAffineTransformMakeRotation(CGFloat(M_PI/2.0))
+        })
+        
     }
     
     
@@ -157,23 +186,21 @@ class ViewController: BaseViewController , UITableViewDataSource,UITableViewDele
                 person.tables.addObjectsFromArray(table)
                 
                 
-                
-                
-                
+                createHeaderView()
+                createTableView()
                 
                 
                 headerLabel?.text = result.objectForKey("name") as String
                 
                 let headImg = result.objectForKey("headimg") as String
                 
-                println(headImg)
                 headerImageView?.sd_setImageWithURL(NSURL.URLWithString(headImg))
                 
                 
-                personalView?.reloadView()
+                
+  
                 
                 UIView.animateWithDuration(0.3, animations: { () -> Void in
-//                    self.headerView!.alpha = 1
                     self.myTableView!.alpha = 1
                     self.myTableView!.reloadData()
                 })

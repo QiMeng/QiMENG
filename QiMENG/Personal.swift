@@ -27,4 +27,8 @@ class Personal : NSObject {
     var address: String = ""     //地址
     var tables: NSMutableArray = NSMutableArray()
     
+    
+    
+    
+    
 }

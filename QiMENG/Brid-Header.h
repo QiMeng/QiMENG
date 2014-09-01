@@ -30,5 +30,7 @@
 
 #define kBasePlace 5.0
 
+#define kBaseColor [UIColor colorWithRed:0/255.0 green:128/255.0 blue:255/255.0 alpha:1]
+
 
 #endif
