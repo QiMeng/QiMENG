@@ -152,6 +152,7 @@ class ViewController: BaseViewController , UITableViewDataSource,UITableViewDele
         if classid == "Honours" {
             var ctrl = HonoursViewController()
             ctrl.navTitle(label?)
+            ctrl.itemArray = item.objectForKey("table") as NSArray
             self.navigationController.pushViewController(ctrl, animated: true)
         }
         

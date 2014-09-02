@@ -109,9 +109,21 @@
 #define COCOAPODS_VERSION_MINOR_UIColor_Utilities 0
 #define COCOAPODS_VERSION_PATCH_UIColor_Utilities 1
 
+// UIImage-ResizeMagick
+#define COCOAPODS_POD_AVAILABLE_UIImage_ResizeMagick
+#define COCOAPODS_VERSION_MAJOR_UIImage_ResizeMagick 0
+#define COCOAPODS_VERSION_MINOR_UIImage_ResizeMagick 0
+#define COCOAPODS_VERSION_PATCH_UIImage_ResizeMagick 1
+
 // iCarousel
 #define COCOAPODS_POD_AVAILABLE_iCarousel
 #define COCOAPODS_VERSION_MAJOR_iCarousel 1
 #define COCOAPODS_VERSION_MINOR_iCarousel 8
 #define COCOAPODS_VERSION_PATCH_iCarousel 0
+
+// pop
+#define COCOAPODS_POD_AVAILABLE_pop
+#define COCOAPODS_VERSION_MAJOR_pop 1
+#define COCOAPODS_VERSION_MINOR_pop 0
+#define COCOAPODS_VERSION_PATCH_pop 6
 

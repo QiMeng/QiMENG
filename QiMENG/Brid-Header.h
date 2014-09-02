@@ -10,7 +10,9 @@
 #define QiMENG_Brid_Header_h
 
 #import <ASIHTTPRequest.h>
+
 #import <ASIFormDataRequest.h>
+
 #import <ASINetworkQueue.h>
 
 #import <ATMHud.h>
@@ -25,6 +27,9 @@
 
 #import <SVProgressHUD.h>
 
+#import <POP.h>
+
+#import <UIImage+ResizeMagick.h>
 
 #define kBaseFont @"Avenir Next"
 

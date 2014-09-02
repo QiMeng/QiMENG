@@ -18,6 +18,7 @@
 		7CA18F5419B2FFF0007D8829 /* PersonalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA18F5319B2FFF0007D8829 /* PersonalView.swift */; };
 		D933174F20C244CD8CC0802B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E748E3624BB04E038DC52C18 /* libPods.a */; };
 		F03F8C5719B47843006E380B /* HonoursViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03F8C5619B47843006E380B /* HonoursViewController.swift */; };
+		F0BDC20219B5F2A200072F09 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BDC20119B5F2A200072F09 /* PhotoCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		7CA18F5319B2FFF0007D8829 /* PersonalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalView.swift; sourceTree = "<group>"; };
 		E748E3624BB04E038DC52C18 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F03F8C5619B47843006E380B /* HonoursViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HonoursViewController.swift; sourceTree = "<group>"; };
+		F0BDC20119B5F2A200072F09 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				F03F8C5619B47843006E380B /* HonoursViewController.swift */,
+				F0BDC20119B5F2A200072F09 /* PhotoCollectionViewCell.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7CA18F5419B2FFF0007D8829 /* PersonalView.swift in Sources */,
+				F0BDC20219B5F2A200072F09 /* PhotoCollectionViewCell.swift in Sources */,
 				F03F8C5719B47843006E380B /* HonoursViewController.swift in Sources */,
 				7CA18F2C19B1EEDF007D8829 /* ViewController.swift in Sources */,
 				7CA18F4919B20FCF007D8829 /* BaseViewController.swift in Sources */,
