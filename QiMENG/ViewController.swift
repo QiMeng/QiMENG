@@ -44,8 +44,6 @@ class ViewController: BaseViewController , UITableViewDataSource,UITableViewDele
     
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: rightBtn)
         
-
-        
         rigthBtnCall(nil)
     }
     func rigthBtnCall(sender:AnyObject?){
@@ -57,7 +55,8 @@ class ViewController: BaseViewController , UITableViewDataSource,UITableViewDele
             myTableView?.tableHeaderView = headerView
             myTableView?.dataSource = self
             myTableView?.delegate = self
-            myTableView?.autoresizingMask = UIViewAutoresizing.FlexibleHeight|UIViewAutoresizing.FlexibleBottomMargin
+            myTableView?.autoresizingMask = UIViewAutoresizing.FlexibleHeight|UIViewAutoresizing.FlexibleBottomMargin|UIViewAutoresizing.FlexibleTopMargin
+            
             myTableView?.alpha = 0
             myTableView?.backgroundColor = UIColor.clearColor()
             self.view.addSubview(myTableView!)
@@ -68,7 +67,7 @@ class ViewController: BaseViewController , UITableViewDataSource,UITableViewDele
         if headerView == nil{
         
             
-            headerView = UIImageView(frame: CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 44 - 44 * CGFloat(Personal.shareInstance().tables.count) ))
+            headerView = UIImageView(frame: CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - CGFloat(kBaseCellHeight) - CGFloat(kBaseCellHeight) * CGFloat(Personal.shareInstance().tables.count) ))
 //            self.view.addSubview(headerView!)
             
             headerView?.backgroundColor = UIColor(red: 0/255.0, green: 128/255.0, blue: 255/255.0, alpha: 1)
@@ -102,7 +101,10 @@ class ViewController: BaseViewController , UITableViewDataSource,UITableViewDele
         return personalView
     }
     func tableView(tableView: UITableView!, heightForHeaderInSection section: Int) -> CGFloat {
-        return 44
+        return CGFloat(kBaseCellHeight)
+    }
+    func tableView(tableView: UITableView!, heightForRowAtIndexPath indexPath: NSIndexPath!) -> CGFloat {
+        return CGFloat(kBaseCellHeight)
     }
     
     func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
@@ -151,6 +153,12 @@ class ViewController: BaseViewController , UITableViewDataSource,UITableViewDele
         
         if classid == "Honours" {
             var ctrl = HonoursViewController()
+            ctrl.navTitle(label?)
+            ctrl.itemArray = item.objectForKey("table") as NSArray
+            self.navigationController.pushViewController(ctrl, animated: true)
+        }
+        else if classid == "Education" {
+            var ctrl = EducationViewController()
             ctrl.navTitle(label?)
             ctrl.itemArray = item.objectForKey("table") as NSArray
             self.navigationController.pushViewController(ctrl, animated: true)

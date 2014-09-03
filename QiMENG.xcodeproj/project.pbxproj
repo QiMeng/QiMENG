@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C48C45719B6E463008337F3 /* EducationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C48C45619B6E463008337F3 /* EducationViewController.swift */; };
 		7CA18F2719B1EEDF007D8829 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA18F2619B1EEDF007D8829 /* AppDelegate.swift */; };
 		7CA18F2A19B1EEDF007D8829 /* QiMENG.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7CA18F2819B1EEDF007D8829 /* QiMENG.xcdatamodeld */; };
 		7CA18F2C19B1EEDF007D8829 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA18F2B19B1EEDF007D8829 /* ViewController.swift */; };
@@ -33,6 +34,7 @@
 
 /* Begin PBXFileReference section */
 		6398B04ECFED4A19AF653CB3 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		7C48C45619B6E463008337F3 /* EducationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EducationViewController.swift; sourceTree = "<group>"; };
 		7CA18F2119B1EEDF007D8829 /* QiMENG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QiMENG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CA18F2519B1EEDF007D8829 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7CA18F2619B1EEDF007D8829 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +73,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7C48C45419B6E42B008337F3 /* Honours */ = {
+			isa = PBXGroup;
+			children = (
+				F03F8C5619B47843006E380B /* HonoursViewController.swift */,
+				F0BDC20119B5F2A200072F09 /* PhotoCollectionViewCell.swift */,
+			);
+			name = Honours;
+			sourceTree = "<group>";
+		};
+		7C48C45519B6E437008337F3 /* Education */ = {
+			isa = PBXGroup;
+			children = (
+				7C48C45619B6E463008337F3 /* EducationViewController.swift */,
+			);
+			name = Education;
+			sourceTree = "<group>";
+		};
 		7CA18F1819B1EEDE007D8829 = {
 			isa = PBXGroup;
 			children = (
@@ -153,8 +172,8 @@
 		F03F8C5519B477F9006E380B /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				F03F8C5619B47843006E380B /* HonoursViewController.swift */,
-				F0BDC20119B5F2A200072F09 /* PhotoCollectionViewCell.swift */,
+				7C48C45519B6E437008337F3 /* Education */,
+				7C48C45419B6E42B008337F3 /* Honours */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -302,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7CA18F5419B2FFF0007D8829 /* PersonalView.swift in Sources */,
+				7C48C45719B6E463008337F3 /* EducationViewController.swift in Sources */,
 				F0BDC20219B5F2A200072F09 /* PhotoCollectionViewCell.swift in Sources */,
 				F03F8C5719B47843006E380B /* HonoursViewController.swift in Sources */,
 				7CA18F2C19B1EEDF007D8829 /* ViewController.swift in Sources */,

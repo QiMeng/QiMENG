@@ -16,8 +16,8 @@ class BaseViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController.navigationBar.translucent = false;
-        
+//        self.navigationController.navigationBar.translucent = false;
+        self.edgesForExtendedLayout = UIRectEdge.None//UIRectEdgeNone
         self.view.backgroundColor = UIColor.whiteColor()
         
     }

@@ -31,9 +31,13 @@
 
 #import <UIImage+ResizeMagick.h>
 
+#import <iCarousel.h>
+
 #define kBaseFont @"Avenir Next"
 
 #define kBasePlace 5.0
+
+#define kBaseCellHeight 44
 
 #define kBaseColor [UIColor colorWithRed:0/255.0 green:128/255.0 blue:255/255.0 alpha:1]
 

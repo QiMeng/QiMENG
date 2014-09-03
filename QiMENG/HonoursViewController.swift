@@ -89,7 +89,6 @@ class HonoursViewController: BaseViewController ,UICollectionViewDataSource,UICo
     func collectionView(collectionView: UICollectionView!, layout collectionViewLayout: UICollectionViewLayout!, sizeForItemAtIndexPath indexPath: NSIndexPath!) -> CGSize{
         
         let width = (self.view.frame.size.width - CGFloat(kBasePlace)*3 )*0.5
-
         
         return CGSizeMake( width , width)
     }
