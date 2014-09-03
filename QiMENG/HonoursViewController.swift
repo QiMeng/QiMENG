@@ -65,11 +65,13 @@ class HonoursViewController: BaseViewController ,UICollectionViewDataSource,UICo
         
         var imgurl = item.objectForKey("imgurl") as String
         
-        cell?.iconImageView.sd_setImageWithURL(NSURL.URLWithString(imgurl), completed: { (image,NSError,SDImageCacheType,NSURL) -> Void in
+        cell?.iconImageView.sd_setImageWithURL(NSURL.URLWithString(imgurl.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!), completed: { (image,NSError,SDImageCacheType,NSURL) -> Void in
 
-            cell?.iconImageView.image = image.resizedImageByWidth( UInt((self.view.frame.size.width - CGFloat(kBasePlace) * 3 ) * 0.5 ))
+            if image != nil {
+                cell?.iconImageView.image = image.resizedImageByWidth( UInt((self.view.frame.size.width - CGFloat(kBasePlace) * 3 ) * 0.5 ))
+            }
             
-            println()
+            println(imgurl)
             
         })
         

@@ -49,29 +49,44 @@ class EducationViewController: BaseViewController , iCarouselDataSource,iCarouse
     
     
     func numberOfItemsInCarousel(carousel: iCarousel!) -> Int {
-        return 40
+        return itemArray.count
     }
     func carousel(carousel: iCarousel!, viewForItemAtIndex index: Int, reusingView view: UIView!) -> UIView! {
-        if view == nil {
+        
+        var itemView = view as UIImageView?
+        
+        if itemView == nil {
             
-            var itemView = UIImageView(frame: CGRectMake(0, 0, 200, 200))
+            itemView = UIImageView(frame: CGRectMake(0, 0, 250, 300))
             
-            itemView.backgroundColor = UIColor.grayColor()
+//            itemView?.backgroundColor = UIColor.grayColor()
             
-            itemView.layer.borderWidth = 3
-            itemView.layer.borderColor = UIColor.purpleColor().CGColor
+//            itemView?.layer.borderWidth = 3
             
-
-            return itemView
+//            itemView?.layer.borderColor = UIColor.purpleColor().CGColor
+            
+            itemView?.contentMode = UIViewContentMode.Center
+            
         }
         
         
+        let item = itemArray.objectAtIndex(index) as NSDictionary
         
+        var imgurl = item.objectForKey("imgurl") as String
         
+        itemView?.sd_setImageWithURL(NSURL.URLWithString(imgurl.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!), completed: { (image,NSError,SDImageCacheType,NSURL) -> Void in
+            
+            if image != nil {
+                itemView?.image = image.resizedImageByWidth( UInt(250))
+            }
+            
+            println(imgurl)
+            
+        })
+
+    
         
-        view?.backgroundColor = UIColor.greenColor()
-        
-        return view
+        return itemView
     }
     
 

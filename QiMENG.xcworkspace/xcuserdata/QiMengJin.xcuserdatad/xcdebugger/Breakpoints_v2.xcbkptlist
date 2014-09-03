@@ -25,12 +25,12 @@
                   symbolName = "QiMENG.PhotoCollectionViewCell.iconImageView.getter : Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UIImageView&gt;"
                   moduleName = "QiMENG"
                   urlString = "file:///Users/QiMengJin/Documents/QiMeng_LYS/GitHub/QiMENG/QiMENG/PhotoCollectionViewCell.swift"
-                  timestampString = "431360089.07752"
+                  timestampString = "431445578.770107"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
                   endingLineNumber = "0"
-                  offsetFromSymbolStart = "18">
+                  offsetFromSymbolStart = "28">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -39,12 +39,12 @@
                   symbolName = "QiMENG.PhotoCollectionViewCell.iconImageView.setter : Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UIImageView&gt;"
                   moduleName = "QiMENG"
                   urlString = "file:///Users/QiMengJin/Documents/QiMeng_LYS/GitHub/QiMENG/QiMENG/PhotoCollectionViewCell.swift"
-                  timestampString = "431360089.077726"
+                  timestampString = "431445578.770386"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
                   endingLineNumber = "0"
-                  offsetFromSymbolStart = "27">
+                  offsetFromSymbolStart = "20">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -53,12 +53,12 @@
                   symbolName = "QiMENG.PhotoCollectionViewCell.init (QiMENG.PhotoCollectionViewCell.Type)(frame : C.CGRect) -&gt; QiMENG.PhotoCollectionViewCell"
                   moduleName = "QiMENG"
                   urlString = "file:///Users/QiMengJin/Documents/QiMeng_LYS/GitHub/QiMENG/QiMENG/PhotoCollectionViewCell.swift"
-                  timestampString = "431360089.077878"
+                  timestampString = "431445578.770591"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "16"
                   endingLineNumber = "16"
-                  offsetFromSymbolStart = "74">
+                  offsetFromSymbolStart = "84">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -67,12 +67,12 @@
                   symbolName = "QiMENG.PhotoCollectionViewCell.init (QiMENG.PhotoCollectionViewCell.Type)(coder : ObjectiveC.NSCoder) -&gt; QiMENG.PhotoCollectionViewCell"
                   moduleName = "QiMENG"
                   urlString = "file:///Users/QiMengJin/Documents/QiMeng_LYS/GitHub/QiMENG/QiMENG/PhotoCollectionViewCell.swift"
-                  timestampString = "431360089.078031"
+                  timestampString = "431445578.770765"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "16"
                   endingLineNumber = "16"
-                  offsetFromSymbolStart = "90">
+                  offsetFromSymbolStart = "100">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -123,6 +123,52 @@
             endingLineNumber = "133"
             landmarkName = "-drawImageInBounds:"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QiMENG/ViewController.swift"
+            timestampString = "431445553.384274"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "153"
+            endingLineNumber = "153"
+            landmarkName = "tableView(_:didSelectRowAtIndexPath:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "QiMENG.ViewController.tableView (QiMENG.ViewController)(Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UITableView&gt;, didSelectRowAtIndexPath : Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.NSIndexPath&gt;) -&gt; ()"
+                  moduleName = "QiMENG"
+                  urlString = "file:///Users/QiMengJin/Documents/QiMeng_LYS/GitHub/QiMENG/QiMENG/ViewController.swift"
+                  timestampString = "431445578.773414"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "154"
+                  endingLineNumber = "154"
+                  offsetFromSymbolStart = "2148">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "QiMENG.ViewController.tableView (QiMENG.ViewController)(Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UITableView&gt;, didSelectRowAtIndexPath : Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.NSIndexPath&gt;) -&gt; ()"
+                  moduleName = "QiMENG"
+                  urlString = "file:///Users/QiMengJin/Documents/QiMeng_LYS/GitHub/QiMENG/QiMENG/ViewController.swift"
+                  timestampString = "431445578.773581"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "154"
+                  endingLineNumber = "154"
+                  offsetFromSymbolStart = "3460">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
