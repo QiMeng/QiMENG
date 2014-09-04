@@ -47,7 +47,7 @@ class ViewController: BaseViewController , UITableViewDataSource,UITableViewDele
         rigthBtnCall(nil)
     }
     func rigthBtnCall(sender:AnyObject?){
-        didRequest("http://qimeng.github.io/phone/introduction.html", loadString: "加载数据中")
+        didRequest("http://qimeng.github.io/phone/data.json", loadString: "加载数据中")
     }
     func createTableView(){
         if myTableView == nil {
@@ -133,7 +133,7 @@ class ViewController: BaseViewController , UITableViewDataSource,UITableViewDele
         cell?.detailTextLabel.text = item.objectForKey("title") as String
 //        cell?.imageView.sd_setImageWithURL(NSURL.URLWithString(item.objectForKey("icon") as String))
         
-        cell?.imageView.sd_setImageWithURL(NSURL.URLWithString(item.objectForKey("icon") as String), placeholderImage: UIImage(named: "warning"))
+        cell?.imageView.sd_setImageWithURL(NSURL.URLWithString(item.objectForKey("iconurl") as String), placeholderImage: UIImage(named: "warning"))
         
         return cell
     }
@@ -154,13 +154,13 @@ class ViewController: BaseViewController , UITableViewDataSource,UITableViewDele
         if classid == "Honours" {
             var ctrl = HonoursViewController()
             ctrl.navTitle(label?)
-            ctrl.itemArray = item.objectForKey("table") as NSArray
+            ctrl.itemArray = item.objectForKey("list") as NSArray
             self.navigationController.pushViewController(ctrl, animated: true)
         }
         else if classid == "Education" {
             var ctrl = EducationViewController()
             ctrl.navTitle(label?)
-            ctrl.itemArray = item.objectForKey("table") as NSArray
+            ctrl.itemArray = item.objectForKey("list") as NSArray
             self.navigationController.pushViewController(ctrl, animated: true)
         }
         
@@ -191,9 +191,9 @@ class ViewController: BaseViewController , UITableViewDataSource,UITableViewDele
 
         if data.isKindOfClass(NSDictionary) {
 
-            let statu = data.objectForKey("STATU") as String
+            let statu = data.objectForKey("statu") as String
             
-            let result = data.objectForKey("RESULT") as NSDictionary
+            let result = data.objectForKey("result") as NSDictionary
             
             if result.isKindOfClass(NSDictionary) {
             
@@ -203,7 +203,7 @@ class ViewController: BaseViewController , UITableViewDataSource,UITableViewDele
                 person.birth = result.objectForKey("birth") as String
                 person.address = result.objectForKey("address") as String
                 
-                let table = result.objectForKey("table") as NSArray
+                let table = result.objectForKey("main") as NSArray
                 
                 person.tables.removeAllObjects()
                 
@@ -216,7 +216,7 @@ class ViewController: BaseViewController , UITableViewDataSource,UITableViewDele
                 
                 headerLabel?.text = result.objectForKey("name") as String
                 
-                let headImg = result.objectForKey("headimg") as String
+                let headImg = result.objectForKey("headimgurl") as String
                 
                 headerImageView?.sd_setImageWithURL(NSURL.URLWithString(headImg))
                 

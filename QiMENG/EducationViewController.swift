@@ -84,8 +84,6 @@ class EducationViewController: BaseViewController , iCarouselDataSource,iCarouse
             
         })
 
-    
-        
         return itemView
     }
     
