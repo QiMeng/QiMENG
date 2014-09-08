@@ -47,7 +47,7 @@ class ViewController: BaseViewController , UITableViewDataSource,UITableViewDele
         rigthBtnCall(nil)
     }
     func rigthBtnCall(sender:AnyObject?){
-        didRequest("http://qimeng.github.io/phone/data.json", loadString: "加载数据中")
+        didRequest("http://qimeng.github.io/phone/data.html", loadString: "加载数据中")
     }
     func createTableView(){
         if myTableView == nil {
@@ -154,13 +154,13 @@ class ViewController: BaseViewController , UITableViewDataSource,UITableViewDele
         if classid == "Honours" {
             var ctrl = HonoursViewController()
             ctrl.navTitle(label?)
-            ctrl.itemArray = item.objectForKey("list") as NSArray
+            ctrl.itemArray = item.objectForKey("items") as NSArray
             self.navigationController.pushViewController(ctrl, animated: true)
         }
         else if classid == "Education" {
             var ctrl = EducationViewController()
             ctrl.navTitle(label?)
-            ctrl.itemArray = item.objectForKey("list") as NSArray
+            ctrl.itemArray = item.objectForKey("items") as NSArray
             self.navigationController.pushViewController(ctrl, animated: true)
         }
         
