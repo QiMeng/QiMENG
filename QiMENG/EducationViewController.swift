@@ -30,7 +30,7 @@ class EducationViewController: BaseViewController , iCarouselDataSource,iCarouse
     }
     
     func leftBtnCall(sender:AnyObject?){
-        self.navigationController.popViewControllerAnimated(true)
+        self.navigationController!.popViewControllerAnimated(true)
     }
     
     func initUI() {

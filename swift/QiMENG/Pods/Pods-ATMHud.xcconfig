@@ -1,0 +1,1 @@
+PODS_ATMHUD_OTHER_LDFLAGS = -framework AudioToolbox -framework QuartzCore

@@ -1,0 +1,63 @@
+PODS:
+  - ASIHTTPRequest (1.8.2):
+    - ASIHTTPRequest/ASIWebPageRequest
+    - ASIHTTPRequest/CloudFiles
+    - ASIHTTPRequest/Core
+    - ASIHTTPRequest/S3
+  - ASIHTTPRequest/ASIWebPageRequest (1.8.2):
+    - ASIHTTPRequest/Core
+  - ASIHTTPRequest/CloudFiles (1.8.2):
+    - ASIHTTPRequest/Core
+  - ASIHTTPRequest/Core (1.8.2):
+    - Reachability
+  - ASIHTTPRequest/S3 (1.8.2):
+    - ASIHTTPRequest/Core
+  - ATMHud (0.0.1)
+  - FMDB (2.3):
+    - FMDB/standard
+  - FMDB/common (2.3)
+  - FMDB/standard (2.3):
+    - FMDB/common
+  - iCarousel (1.8)
+  - JSONKit (1.5pre)
+  - pop (1.0.6)
+  - PopoverView (0.0.2)
+  - Reachability (3.1.1)
+  - SDWebImage (3.7.1):
+    - SDWebImage/Core
+  - SDWebImage/Core (3.7.1)
+  - SIAlertView (1.3)
+  - SVProgressHUD (1.0)
+  - UIColor-Utilities (1.0.1)
+  - UIImage-ResizeMagick (0.0.1)
+
+DEPENDENCIES:
+  - ASIHTTPRequest
+  - ATMHud
+  - FMDB
+  - iCarousel
+  - JSONKit
+  - pop
+  - PopoverView
+  - SDWebImage
+  - SIAlertView
+  - SVProgressHUD
+  - UIColor-Utilities
+  - UIImage-ResizeMagick
+
+SPEC CHECKSUMS:
+  ASIHTTPRequest: 2c8335b49410c0e2ad42829c438e74d454b77590
+  ATMHud: df3c2b7da10f3f5af2d0a25e9dcc0196d85c3ac1
+  FMDB: 31ec26773c7f7b7890a6038235a1f2bbd933a7cb
+  iCarousel: cf77aea48dfcde9a0cd85569a1d8a9b6dd543bd7
+  JSONKit: efef3bbd3372ff33f96b9c6f34cf4fe18e74ab69
+  pop: e518794da38942c05255eb64b36d894e70cb4f00
+  PopoverView: d1076b527c1b0c3dd1e61436f999eda09b300004
+  Reachability: 8e9635e3cb4f98e7f825e51147f677ecc694d0e7
+  SDWebImage: 116e88633b5b416ea0ca4b334a4ac59cf72dd38d
+  SIAlertView: d00609a1faa9d82f17b9f0b4eede64e84a577b10
+  SVProgressHUD: 5034c6e22b8c2ca3e09402e48d41ed0340aa1c50
+  UIColor-Utilities: 3f13aebe447f5e19c8d3aa18c194c53116b23537
+  UIImage-ResizeMagick: 6edd4b95aabf4be264bf99147aa27abb319f3c7f
+
+COCOAPODS: 0.33.1
