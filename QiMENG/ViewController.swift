@@ -31,7 +31,7 @@ class ViewController: BaseViewController , UITableViewDataSource,UITableViewDele
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.view.backgroundColor = UIColor(red: 0/255.0, green: 128/255.0, blue: 255/255.0, alpha: 1)
-        self.navigationController.navigationBar.barTintColor = self.view.backgroundColor
+        self.navigationController?.navigationBar.barTintColor = self.view.backgroundColor
         
         let mySegment = UISegmentedControl(items: ["Personal","Project"] )
         mySegment.tintColor = UIColor.whiteColor()
@@ -92,7 +92,7 @@ class ViewController: BaseViewController , UITableViewDataSource,UITableViewDele
     }
     
 
-    func tableView(tableView: UITableView!, viewForHeaderInSection section: Int) -> UIView! {
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if personalView == nil {
             personalView = PersonalView(frame: CGRectMake(0, CGRectGetMaxY(headerView!.frame), self.view.frame.size.width, 44));
         }
@@ -100,17 +100,17 @@ class ViewController: BaseViewController , UITableViewDataSource,UITableViewDele
 
         return personalView
     }
-    func tableView(tableView: UITableView!, heightForHeaderInSection section: Int) -> CGFloat {
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return CGFloat(kBaseCellHeight)
     }
-    func tableView(tableView: UITableView!, heightForRowAtIndexPath indexPath: NSIndexPath!) -> CGFloat {
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return CGFloat(kBaseCellHeight)
     }
     
-    func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Personal.shareInstance().tables.count
     }
-    func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         
         let cellIdentifier: String = "cell"
@@ -119,8 +119,8 @@ class ViewController: BaseViewController , UITableViewDataSource,UITableViewDele
         
         if cell == nil { // no value
             cell = UITableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: cellIdentifier)
-            cell?.textLabel.font = UIFont(name: kBaseFont, size: 17)
-            cell?.detailTextLabel.font = UIFont(name: kBaseFont, size: 17)
+            cell?.textLabel?.font = UIFont(name: kBaseFont, size: 17)
+            cell?.detailTextLabel?.font = UIFont(name: kBaseFont, size: 17)
             cell?.selectionStyle = UITableViewCellSelectionStyle.None
             
             cell?.accessoryView = UIImageView(image: UIImage(named: "arrow-right"))
@@ -129,19 +129,20 @@ class ViewController: BaseViewController , UITableViewDataSource,UITableViewDele
         
         let item = Personal.shareInstance().tables.objectAtIndex(indexPath.row) as NSDictionary
 
-        cell?.textLabel.text = item.objectForKey("label") as String
-        cell?.detailTextLabel.text = item.objectForKey("title") as String
-//        cell?.imageView.sd_setImageWithURL(NSURL.URLWithString(item.objectForKey("icon") as String))
+        cell?.textLabel?.text = item.objectForKey("label") as? String
+        cell?.detailTextLabel?.text = item.objectForKey("title") as? String
+
+        var url: NSURL = NSURL(string: item.objectForKey("iconurl")as String)!
+        cell?.imageView?.sd_setImageWithURL(url, placeholderImage: UIImage(named: "warning"))
+
         
-        cell?.imageView.sd_setImageWithURL(NSURL.URLWithString(item.objectForKey("iconurl") as String), placeholderImage: UIImage(named: "warning"))
-        
-        return cell
+        return cell!
     }
     func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
         let cell = tableView.cellForRowAtIndexPath(indexPath)
         
         UIView.animateWithDuration(0.3, animations: { () -> Void in
-            cell.accessoryView.transform = CGAffineTransformMakeRotation(CGFloat(M_PI/2.0))
+            cell!.accessoryView!.transform = CGAffineTransformMakeRotation(CGFloat(M_PI/2.0))
         })
         
         
@@ -155,13 +156,13 @@ class ViewController: BaseViewController , UITableViewDataSource,UITableViewDele
             var ctrl = HonoursViewController()
             ctrl.navTitle(label?)
             ctrl.itemArray = item.objectForKey("items") as NSArray
-            self.navigationController.pushViewController(ctrl, animated: true)
+            self.navigationController?.pushViewController(ctrl, animated: true)
         }
         else if classid == "Education" {
             var ctrl = EducationViewController()
             ctrl.navTitle(label?)
             ctrl.itemArray = item.objectForKey("items") as NSArray
-            self.navigationController.pushViewController(ctrl, animated: true)
+            self.navigationController?.pushViewController(ctrl, animated: true)
         }
         
         
@@ -173,7 +174,10 @@ class ViewController: BaseViewController , UITableViewDataSource,UITableViewDele
         SVProgressHUD.showWithStatus(loadString)
         
         clearASI()
-        httpASI_GET = ASIHTTPRequest(URL: NSURL.URLWithString(url))
+        
+        var aurl: NSURL = NSURL(string: url)!
+        
+        httpASI_GET = ASIHTTPRequest(URL: aurl)
         httpASI_GET!.delegate = self
         httpASI_GET!.didFinishSelector = "didFinishSelector:"
         httpASI_GET!.didFailSelector = "didFailSelector:"
@@ -214,15 +218,13 @@ class ViewController: BaseViewController , UITableViewDataSource,UITableViewDele
                 createTableView()
                 
                 
-                headerLabel?.text = result.objectForKey("name") as String
+                headerLabel?.text = result.objectForKey("name") as? String
                 
-                let headImg = result.objectForKey("headimgurl") as String
+                let headImg = result.objectForKey("headimgurl") as? String
                 
-                headerImageView?.sd_setImageWithURL(NSURL.URLWithString(headImg))
+                var url: NSURL = NSURL(string: headImg!)!
                 
-                
-                
-  
+                headerImageView?.sd_setImageWithURL(url)
                 
                 UIView.animateWithDuration(0.3, animations: { () -> Void in
                     self.myTableView!.alpha = 1

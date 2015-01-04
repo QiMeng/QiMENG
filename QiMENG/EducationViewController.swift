@@ -9,14 +9,14 @@
 import UIKit
 
 class EducationViewController: BaseViewController , iCarouselDataSource,iCarouselDelegate {
-
+    
     var itemArray = NSArray()
     
     var myCarousel : iCarousel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         
         let leftBtn = UIButton(frame: CGRectMake(0, 0, 44, 44))
@@ -59,11 +59,11 @@ class EducationViewController: BaseViewController , iCarouselDataSource,iCarouse
             
             itemView = UIImageView(frame: CGRectMake(0, 0, 250, 300))
             
-//            itemView?.backgroundColor = UIColor.grayColor()
+            //            itemView?.backgroundColor = UIColor.grayColor()
             
-//            itemView?.layer.borderWidth = 3
+            //            itemView?.layer.borderWidth = 3
             
-//            itemView?.layer.borderColor = UIColor.purpleColor().CGColor
+            //            itemView?.layer.borderColor = UIColor.purpleColor().CGColor
             
             itemView?.contentMode = UIViewContentMode.Center
             
@@ -74,34 +74,34 @@ class EducationViewController: BaseViewController , iCarouselDataSource,iCarouse
         
         var imgurl = item.objectForKey("imgurl") as String
         
-        itemView?.sd_setImageWithURL(NSURL.URLWithString(imgurl.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!), completed: { (image,NSError,SDImageCacheType,NSURL) -> Void in
-            
+        var url: NSURL = NSURL(string: imgurl)!
+        
+        itemView?.sd_setImageWithURL(url, completed: { (image, NSError, SDImageCacheType, NSURL) -> Void in
             if image != nil {
                 itemView?.image = image.resizedImageByWidth( UInt(250))
             }
             
-            println(imgurl)
-            
         })
-
+        
+        
         return itemView
     }
     
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // Get the new view controller using segue.destinationViewController.
+    // Pass the selected object to the new view controller.
     }
     */
-
+    
 }

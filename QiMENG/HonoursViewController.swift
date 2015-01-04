@@ -30,7 +30,7 @@ class HonoursViewController: BaseViewController ,UICollectionViewDataSource,UICo
     }
     
     func leftBtnCall(sender:AnyObject?){
-        self.navigationController.popViewControllerAnimated(true)
+        self.navigationController?.popViewControllerAnimated(true)
     }
     
     func initUI(){
@@ -50,11 +50,11 @@ class HonoursViewController: BaseViewController ,UICollectionViewDataSource,UICo
         
     }
     
-    func collectionView(collectionView: UICollectionView!, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return itemArray.count
     }
     
-    func collectionView(collectionView: UICollectionView!, cellForItemAtIndexPath indexPath: NSIndexPath!) -> UICollectionViewCell! {
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
         let iden = "cell"
 
@@ -65,17 +65,26 @@ class HonoursViewController: BaseViewController ,UICollectionViewDataSource,UICo
         
         var imgurl = item.objectForKey("imgurl") as String
         
-        cell?.iconImageView.sd_setImageWithURL(NSURL.URLWithString(imgurl.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!), completed: { (image,NSError,SDImageCacheType,NSURL) -> Void in
-
+        var url: NSURL = NSURL(string: imgurl)!
+        
+        cell?.iconImageView?.sd_setImageWithURL(url, completed: { (image, NSError, SDImageCacheType, NSURL) -> Void in
             if image != nil {
-                cell?.iconImageView.image = image.resizedImageByWidth( UInt((self.view.frame.size.width - CGFloat(kBasePlace) * 3 ) * 0.5 ))
+                cell?.iconImageView?.image = image.resizedImageByWidth( UInt(250))
             }
-            
-            println(imgurl)
             
         })
         
-        return cell
+//        cell?.iconImageView.sd_setImageWithURL(NSURL.URLWithString(imgurl.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!), completed: { (image,NSError,SDImageCacheType,NSURL) -> Void in
+//
+//            if image != nil {
+//                cell?.iconImageView.image = image.resizedImageByWidth( UInt((self.view.frame.size.width - CGFloat(kBasePlace) * 3 ) * 0.5 ))
+//            }
+//            
+//            println(imgurl)
+//            
+//        })
+        
+        return cell!
         
 
    
